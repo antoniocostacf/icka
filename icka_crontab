@@ -1,0 +1,13 @@
+#!/bin/bash
+#### Instructions ####
+# chmod +x icka_cronjob
+# Edit 'your@email' and 'yourpassword' to match your IRCCloud account
+# Add the following to your crontab it's will run every hour.
+# 0 * * * * $HOME/icka_cronjob >/dev/null 2>&1
+
+ICKA_EMAIL='your@mail'
+ICKA_PASSWORD='yourpassword'
+ICKA_DIR='/home/yourhome/ickafolder/'
+
+cd $ICKA_DIR
+./icka -email $ICKA_EMAIL -password $ICKA_PASSWORD
